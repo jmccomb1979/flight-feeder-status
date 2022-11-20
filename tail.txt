@@ -1,0 +1,13 @@
+</td></tr>
+</table>
+        </div>
+<div class="graphs">
+        <img src="/stats-graphs/system-localhost-cpu-24h.png" alt=""><br/>
+        <img src="/stats-graphs/system-localhost-memory-24h.png" alt="">
+        <img src="/stats-graphs/system-localhost-df_root-24h.png" alt=""><br/>
+        <img src="/stats-graphs/system-localhost-network_bandwidth-24h.png" alt="">
+        <img src="/stats-graphs/system-localhost-disk_io_octets-24h.png" alt="">
+</div>
+
+</body>
+</html>
