@@ -1,0 +1,12 @@
+</code>
+</td><td class="m">
+<h2>Links</h2>
+<a href="graphs1090/" name="Status Graphs">Status Graphs</a><br />
+<a href="tar1090/" name="Current Map">Current Reception</a><br />
+<a href="tar1090/?pTracks" name="24-hour Map">24-hour Reception</a><br />
+<a href="https://flightaware.com/" name="Flightaware">Flightaware Status</a>
+<a href="https://www.flightradar24.com" name="FlightRadar24">FlightRadar24 Status</a><>
+<a href="https://planefinder.net" name="Planefinder">Planefinder Status</a><br />
+<a href="https://globe.adsbexchange.com/" name="24-hour Map">ADSB Exchange Map</a><br />
+</td><td class="r">
+<h2>Uptime & feeder status</h2>
