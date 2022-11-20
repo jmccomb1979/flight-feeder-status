@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Piaware Main Page</title>
+<meta name="generator" content="Bluefish 2.2.12" >
+<meta name="author" content="Jonathan McComb" >
+<meta name="date" content="2022-11-20T16:34:26+0000" >
+<meta name="copyright" content="GPL3">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
+<meta http-equiv="content-style-type" content="text/css">
+<meta http-equiv="expires" content="0">
+<link href="default.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+        <div class="shadowbox">
+                <h1>PiAware Menu & Status Page</h1>
+        </div>
+        <div class="infopane">
+                <table>
+<tr><td class="l">
+<h2>General Information</h2>
+<code>
