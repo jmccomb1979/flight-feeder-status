@@ -27,3 +27,11 @@ min-width: 58%;
 width: 80em;
 margin: 0 auto;
 }
+.boldred {
+color: red;
+font-weight: bold;
+}
+.boldgreen {
+color: green;
+font-weight: bold;
+}
