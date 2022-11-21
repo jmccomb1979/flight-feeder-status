@@ -2,22 +2,21 @@
 
 neofetch --stdout --disable title underline uptime | awk '{print $0, "<br />"}' > /root/stats1.txt
 
-echo "Uptime @ "`uptime`| awk '{print $0, "<br />"}' > /root/stats2.txt
-echo "<hr/>">> /root/stats2.txt
-echo "<b>readsb status:</b>" `systemctl status readsb | grep Active| awk '{print $0, "<br />"}'`>> /root/stats2.txt
-echo "<hr/>">> /root/stats2.txt
-echo "<b>tar1090 status:</b>" `systemctl status tar1090 | grep Active| awk '{print $0, "<br />"}'`>> /root/stats2.t>
-echo "<hr/>">> /root/stats2.txt
-echo "<b>graphs1090 status:</b>" `systemctl status graphs1090 | grep Active| awk '{print $0, "<br />"}'`>> /root/st>
-echo "<hr/>">> /root/stats2.txt
-echo "<b>Flightaware status:</b>" `systemctl status piaware | grep Active| awk '{print $0, "<br />"}'`>> /root/stat>
-echo "<hr/>">> /root/stats2.txt
-echo "<b>Flight Radar 24 status:</b>" `systemctl status fr24feed | grep Active| awk '{print $0, "<br />"}'`>> /root>
-echo "<hr/>">> /root/stats2.txt
-echo "<b>Planefinder status:</b>" `systemctl status pfclient | grep Active| awk '{print $0, "<br />"}'`>> /root/sta>
-echo "<hr/>">> /root/stats2.txt
-echo "<b>ADSBexchange status:</b>" `systemctl status adsbexchange-feed | grep Active| awk '{print $0, "<br />"}'`>>>
-echo "<hr/>">> /root/stats2.txt
+SERVICES=( readsb tar1090 graphs1090 piaware fr24feed pfclient adsbexchange-feed ) 
+rm /root/stats2.txt
+for i in "${SERVICES[@]}"
+  do
+    STATE=`systemctl status $i | grep "Active:"`
+    RUNNING=`echo $STATE | grep "active (running)"`
+    SINCE=`echo $RUNNING | cut -d' ' -f 5,6,7`
+    if [[ $RUNNING == "" ]]
+    then
+      echo "<p class=\"boldred\">$i is NOT Running!</p>">> /root/stats2.txt
+    else
+      echo "<p><span class=\"boldgreen\">$i</span> has been running since $SINCE GMT</p>">> /root/stats2.txt
+    fi
+  echo "<hr />">> /root/stats2.txt
+done
 
 cat /root/head.txt > /var/www/html/index.html
 cat /root/stats1.txt >> /var/www/html/index.html
